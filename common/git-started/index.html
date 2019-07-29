@@ -1,0 +1,867 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
+    
+    
+      
+        <title>Git Started - Team Bliss</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.0284f74d.css">
+      
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#git-started" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Team Bliss" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Team Bliss
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Git Started
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="Team Bliss" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Team Bliss
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Welcome to the wiki!" class="md-nav__link">
+      Welcome to the wiki!
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Bliss OS
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Bliss OS
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Bliss OS/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      BlissRoms
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        BlissRoms
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../BlissRoms/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../BlissRoms/build-guide/" title="BuildGuide" class="md-nav__link">
+      BuildGuide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../BlissRoms/build-tips/" title="Build Tips" class="md-nav__link">
+      Build Tips
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      Common
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Common
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Git Started
+      </label>
+    
+    <a href="./" title="Git Started" class="md-nav__link md-nav__link--active">
+      Git Started
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#foreword" title="Foreword" class="md-nav__link">
+    Foreword
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation" title="Installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-the-terminal-set-up" title="Get the terminal set up" class="md-nav__link">
+    Get the terminal set up
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#register-at-gerrit" title="Register at Gerrit" class="md-nav__link">
+    Register at Gerrit
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gerrit-shows-an-error-about-the-key" title="Gerrit shows an error about the key!" class="md-nav__link">
+    Gerrit shows an error about the key!
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reviewing-code" title="Reviewing Code" class="md-nav__link">
+    Reviewing Code
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#my-output-is-blank-or-different-why" title="My output is blank (or different.) Why?" class="md-nav__link">
+    My output is blank (or different.) Why?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cherry-picking-commits-to-current-branch" title="Cherry-picking commits to current branch" class="md-nav__link">
+    Cherry-picking commits to current branch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cherry-picking-commits-to-new-branch" title="Cherry-picking commits to new branch" class="md-nav__link">
+    Cherry-picking commits to new branch
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submitting-code" title="Submitting code" class="md-nav__link">
+    Submitting code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#picking-from-other-sources" title="Picking from other sources" class="md-nav__link">
+    Picking from other sources
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion" title="Conclusion" class="md-nav__link">
+    Conclusion
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Infrastructure
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Infrastructure
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../infrastructure/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#foreword" title="Foreword" class="md-nav__link">
+    Foreword
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation" title="Installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-the-terminal-set-up" title="Get the terminal set up" class="md-nav__link">
+    Get the terminal set up
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#register-at-gerrit" title="Register at Gerrit" class="md-nav__link">
+    Register at Gerrit
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gerrit-shows-an-error-about-the-key" title="Gerrit shows an error about the key!" class="md-nav__link">
+    Gerrit shows an error about the key!
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reviewing-code" title="Reviewing Code" class="md-nav__link">
+    Reviewing Code
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#my-output-is-blank-or-different-why" title="My output is blank (or different.) Why?" class="md-nav__link">
+    My output is blank (or different.) Why?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cherry-picking-commits-to-current-branch" title="Cherry-picking commits to current branch" class="md-nav__link">
+    Cherry-picking commits to current branch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cherry-picking-commits-to-new-branch" title="Cherry-picking commits to new branch" class="md-nav__link">
+    Cherry-picking commits to new branch
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submitting-code" title="Submitting code" class="md-nav__link">
+    Submitting code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#picking-from-other-sources" title="Picking from other sources" class="md-nav__link">
+    Picking from other sources
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion" title="Conclusion" class="md-nav__link">
+    Conclusion
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="git-started">Git Started</h1>
+<h2 id="foreword">Foreword</h2>
+<p>This guide helps people learn <code>git</code> commands and how to get the features you want into your favorite ROM and make your own builds. This will help new people get started and will be a great refresher for veteran <code>git</code> users and has instructions for Arch Linux users as well. The document will be ever-changing and evolving because even we will be learning new material and will be putting it in here.</p>
+<h3 id="installation">Installation</h3>
+<p>In order to use <code>git review</code> we need it installed on our local machine.  For Ubuntu we use the package manager to install it.</p>
+<pre><code>sudo apt-get install git-review
+</code></pre>
+<p>Or for Arch based installs, use:</p>
+<pre><code>sudo pacman -S git-review
+</code></pre>
+<h3 id="get-the-terminal-set-up">Get the terminal set up</h3>
+<p>First, let's make sure our local <code>git</code> and Gerrit have the same email address associated.</p>
+<pre><code>cd
+cat .gitconfig
+</code></pre>
+<p>This command should show something along those lines:</p>
+<pre><code>[user]
+email = you@youremail.com
+name = Your Name
+</code></pre>
+<p>Edit any incorrect details. Your email and name is used to sign off commits, various changes, etc, so it is important that they are the same ones found on Gerrit and GitHub.</p>
+<p>Next we will create a SSH key named “gerrit” to communicate with the Gerrit server.</p>
+<pre><code>ssh-keygen -t rsa -C you@youremail.com -f ~/.ssh/gerrit
+</code></pre>
+<p>Again, note the email address must be the same here, your <code>.gitconfig</code>, and on Gerrit.</p>
+<h3 id="register-at-gerrit">Register at Gerrit</h3>
+<p>Open your favorite browser and go to <a href="http://review.blissroms.com">http://review.blissroms.com</a>. You will see a “Sign In” button on the top right - click that and register with GitHub.  Please note that you will need to use the same email address that you registered with GitHub for your terminal interactions with Gerrit.</p>
+<p>Now we need to add our SSH key to Gerrit. Your name will be on the top right of the page.  Click your name and you should see “Settings”.  Once there click on the link “SSH Public Keys” on the left sidebar. Once it loads, click "Add Key" on the right.</p>
+<p>Let's copy the key from the terminal and paste it into the browser.</p>
+<pre><code>cat ~/.ssh/gerrit.pub
+</code></pre>
+<p>This should show something like:</p>
+<pre><code>ssh-rsa AAAABBBBBBBBBBCCCCCCCCCCCCCCCCCCDjhl8768usdfsdfuhf/BlahBlahBlah/ThIs+1s/A/fAk3+k3Y/Hdhs+PlCesTvQqfaqHTHwdzGhn2lKVt14WYvQEDKVM9JoE9e8xarNWYa0ZspB1MGn2RVJ3xRp0+Q/pA237uBCl62yTbVGtKQBZB6Q+7A54z795U+G2wCb1rAQnI5yn5q/pQ4NhB0BLml/QRmjn/S8PldEge9Hfdh4Ifdk4r9DKSiicf7IK56jklDHKkJDFkjh/3345L10sTyre3JOeZyvr5SJdyqMtmMv+uSGF28fgZ6/OEO/yBY/eYEI/XVRDaRRat8nGHGae0T4dx me@myemail.com
+</code></pre>
+<p>Starting with the line beginning with ssh-rsa and ending with the email, paste that bit into the browser and click “Add”.</p>
+<h4 id="gerrit-shows-an-error-about-the-key">Gerrit shows an error about the key!</h4>
+<p>Are you sure you used the correct key? Do not use the "private" key. The private key should be kept private as it is the key that allows you to authenticate yourself against servers like Gerrit. When you authenticate using your private key, the servers send out requests encrypted with your "public" key that only your "private" key can decrypt. This is the basis behind SSH authentication. So keep your private key safe, and try pasting the public key! Most public keys end with the characters <code>.pub</code>.</p>
+<p>Then, add the new SSH key to your local identity in terminal.</p>
+<pre><code>eval `ssh-agent`
+</code></pre>
+<p>This should print off a bunch of lines. We’re doing this to launch the ssh-agent before adding the key.</p>
+<pre><code>ssh-add ~/.ssh/gerrit
+</code></pre>
+<p>This will result in something along the lines of:</p>
+<pre><code>Identity added: /home/yourusername/.ssh/gerrit (/home/yourusername/.ssh/gerrit)
+</code></pre>
+<p>If you don’t get this, and get this instead:</p>
+<pre><code>Could not open a connection to your authentication agent.
+</code></pre>
+<p>Or this:</p>
+<pre><code>Error connecting to agent: No such file or directory.
+</code></pre>
+<p>This is because in recent versions of Ubuntu, you need to change how you launch <code>ssh-agent</code>. Run the command below, then try adding your SSH key again.</p>
+<pre><code>eval “$(ssh-agent)”
+</code></pre>
+<p>Now we should be ready to use <code>git review</code>.</p>
+<h3 id="reviewing-code">Reviewing Code</h3>
+<p>Just <code>cd</code> to your source code directory and find the package you want to look at from Gerrit.  I’ll use <code>frameworks/base</code> as an example.</p>
+<pre><code># cd into source code directory
+cd ~/bliss/p9.0
+
+# Find project to work on
+cd frameworks/base
+</code></pre>
+<p>Let’s setup the remote to Gerrit:</p>
+<pre><code>git review -s
+</code></pre>
+<p>This should create a <code>gerrit</code> remote.  If you added a passphrase to your SSH key you will have to enter that.</p>
+<p>However, if this command outputs something like this:</p>
+<pre><code>Could not connect to gerrit.
+Enter your gerrit username:
+</code></pre>
+<p>And after you input your username, it shows something like this:</p>
+<pre><code>Trying again with ssh://username@review.blissroms.com:29418/platform_frameworks_base.git
+&lt;traceback object at 0x7f7f95ea9e18&gt;
+We don't know where your gerrit is. Please manually create a remote named "gerrit" and try again.
+Could not connect to gerrit at ssh://username@review.blissroms.com:29418/platform_frameworks_base.git
+Traceback (most recent call last):
+  File "/usr/bin/git-review", line 10, in &lt;module&gt;
+    sys.exit(main())
+  File "/usr/lib/python2.7/dist-packages/git_review/cmd.py", line 1534, in main
+    sys.exit(e.EXIT_CODE)
+AttributeError: 'GitReviewException' object has no attribute 'EXIT_CODE'
+</code></pre>
+<p>Why does this happen? This is because the <code>ssh-agent</code> process got killed after prolonged use of the system, so you need to restart it.</p>
+<p>As a quick and dirty fix, run this again:</p>
+<pre><code>eval “$(ssh-agent)”
+</code></pre>
+<p>This should fix it. If not, then you need to go back to Chapter 1 and add your existing key. Don’t make a new key, then you’d need to add a new public key to the Bliss Gerrit.</p>
+<p>Now let’s see if there are any changes we can review.</p>
+<pre><code>git review -l
+</code></pre>
+<p>This outputs:</p>
+<pre><code>2433  new-mm6.0  SystemUI: fix double tap power launching custom lockscreen icon
+2432  new-mm6.0  SystemUI: remove extraneous debug log
+Found 2 items for review
+</code></pre>
+<h4 id="my-output-is-blank-or-different-why">My output is blank (or different.) Why?</h4>
+<p>This is because right now, there are no changes to be reviewed in <code>frameworks/base</code> (or there are different commits to be reviewed.) This is completely normal and to be expected, as we merge and submit new commits frequently. The guide will probably be out of sync with current changes by the time you are reading this.</p>
+<p>Now you have a list of commits sorted by change number with a description of what changes were made.</p>
+<p>We have a few choices of how to pick commits.</p>
+<h4 id="cherry-picking-commits-to-current-branch">Cherry-picking commits to current branch</h4>
+<pre><code>git review -x changenumber
+</code></pre>
+<p>will cherry-pick that commit to the current branch you are in.  A benefit of this is the next time you <code>repo sync –force-sync</code>, it will discard the commits you picked.</p>
+<h4 id="cherry-picking-commits-to-new-branch">Cherry-picking commits to new branch</h4>
+<pre><code>git review -d changenumber
+</code></pre>
+<p>will cherry-pick to a new branch based on the submitter’s name and change ID.  If you choose this route the change will be in its own branch and when you are done you can just delete that branch.</p>
+<pre><code>Switched to a new branch review/yourusername/changenumber
+</code></pre>
+<p>Now you can review the change. Follow these guidelines:</p>
+<ul>
+<li>Did the ROM build with the change incorporated?</li>
+<li>Did the added feature or fix work in the new build?</li>
+<li>Did the new commit break any other aspects of the build?</li>
+</ul>
+<p>After reviewing these guidelines, log into Gerrit via your web browser, and click on the commit you reviewed. Select the ‘Reply’ button on the top and choose your score. +1 if it works as intended, -1 if not. Be sure to leave comments on why you gave your score (such as “commit A does not show in 320 DPI”, etc)</p>
+<p>Once you're done, return to the base directory (<code>croot</code>) to follow along with the next example!</p>
+<h3 id="submitting-code">Submitting code</h3>
+<p>Go to the directory of the package or app you want to make changes to. We will use <code>frameworks/base</code> as an example.</p>
+<pre><code>cd frameworks/base
+</code></pre>
+<p>Setup the remote to Gerrit if you haven’t already:</p>
+<pre><code>git review -s
+</code></pre>
+<p>Next, make sure you are on the correct branch:</p>
+<pre><code>git branch -t p9.0 BlissRoms/p9.0
+</code></pre>
+<p>This makes sure that your local branch follows the remote branch. <code>-t</code> stands for tracking. Now we need to <code>checkout</code>, to switch to that new branch we tracked. You usually do not need to do the above command, but it is a nice check to do if something is going south.</p>
+<pre><code>git checkout p9.0
+</code></pre>
+<p>This should output:</p>
+<pre><code>Changed to new branch p9.0 tracking upstream BlissRoms/p9.0
+</code></pre>
+<p>Now make your changes, cherry-picks, etc. and commit them. If you need a guide to do that, check out <a href="#picking-from-other-sources">Picking from other sources</a>. When you’re done, come back here! Then all you have to do to send it to gerrit is:</p>
+<pre><code>git review
+</code></pre>
+<p>If you are submitting multiple commits it will ask if you really want to, just type “yes” at the prompt.</p>
+<h3 id="picking-from-other-sources">Picking from other sources</h3>
+<p>So you’ve successfully learned how to commit and send it to Bliss Gerrit. But you need to find something to commit. Thankfully, there are lots of examples you can try out. You can check other teams’ Gerrits and cherry-pick from them.</p>
+<p>For this demonstration, I’m going to use LineageOS's Gerrit. Find the commit you want, and note down the commit ID.</p>
+<p>Now, we need to add LOS’s repositories. If you’re pulling over a commit, you must make sure that we track the repository by going to Bliss’s Gerrit and checking in Projects &gt; List. If the repository is not there, it usually means we aren’t tracking it.</p>
+<pre><code>git remote add los https://github.com/LineageOS/……(your repo name)
+git remote fetch los lineage-16.0
+</code></pre>
+<p>We’ve finished adding LOS’s repositories. Now you need to grab the commit ID you copied earlier and paste it on the command underneath.</p>
+<pre><code>git cherry-pick 9ff831
+</code></pre>
+<p>Replace 9ff831 with your own commit ID. If <code>git</code> complains about duplicate revisions, paste the full SHA1 hash instead of the shorthand <code>git</code> uses.</p>
+<p>Before pushing and submitting, we need to check if our commit was successfully committed. Type the bottom command:</p>
+<pre><code>git log --oneline
+</code></pre>
+<p>After you check that your commit is there, you can push <code>q</code> to quit. Then you can follow the instructions from <a href="#submitting-code">Submitting code</a> again.</p>
+<h3 id="conclusion">Conclusion</h3>
+<p>Don’t worry if you don’t get it at once. It’s a fairly long process of submitting and reviewing at Gerrit. Read the guide again and again and you’ll start to remember commands without looking at this. I will continue with this as I learn more things, I hope this has helped someone.</p>
+<p>-- Vaughn (rwaterspf1)</p>
+<p>-- Eric Park (ideaman924)</p>
+<p>-- Jon West (electrikjesus)</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../" title="Index" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Index
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../infrastructure/" title="Index" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Index
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.245445c6.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>

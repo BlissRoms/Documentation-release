@@ -1,0 +1,721 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
+    
+    
+      
+        <title>Build Tips - Team Bliss</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.0284f74d.css">
+      
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#build-tips" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Team Bliss" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Team Bliss
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Build Tips
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="Team Bliss" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Team Bliss
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Welcome to the wiki!" class="md-nav__link">
+      Welcome to the wiki!
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Bliss OS
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Bliss OS
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Bliss OS/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      BlissRoms
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        BlissRoms
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../build-guide/" title="BuildGuide" class="md-nav__link">
+      BuildGuide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Build Tips
+      </label>
+    
+    <a href="./" title="Build Tips" class="md-nav__link md-nav__link--active">
+      Build Tips
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#repo-optimization-tips" title="repo optimization tips" class="md-nav__link">
+    repo optimization tips
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#threads" title="Threads" class="md-nav__link">
+    Threads
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#current-history-only" title="Current history only" class="md-nav__link">
+    Current history only
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#force" title="Force" class="md-nav__link">
+    Force
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minimal-fetch" title="Minimal fetch" class="md-nav__link">
+    Minimal fetch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#putting-it-all-together" title="Putting it all together" class="md-nav__link">
+    Putting it all together
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reset-tree" title="Reset tree" class="md-nav__link">
+    Reset tree
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-cherry-pick" title="GitHub cherry-pick" class="md-nav__link">
+    GitHub cherry-pick
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#make-and-go-inside" title="Make and go inside" class="md-nav__link">
+    Make and go inside
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Common
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Common
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/git-started/" title="Git Started" class="md-nav__link">
+      Git Started
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Infrastructure
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Infrastructure
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../infrastructure/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#repo-optimization-tips" title="repo optimization tips" class="md-nav__link">
+    repo optimization tips
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#threads" title="Threads" class="md-nav__link">
+    Threads
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#current-history-only" title="Current history only" class="md-nav__link">
+    Current history only
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#force" title="Force" class="md-nav__link">
+    Force
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minimal-fetch" title="Minimal fetch" class="md-nav__link">
+    Minimal fetch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#putting-it-all-together" title="Putting it all together" class="md-nav__link">
+    Putting it all together
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reset-tree" title="Reset tree" class="md-nav__link">
+    Reset tree
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-cherry-pick" title="GitHub cherry-pick" class="md-nav__link">
+    GitHub cherry-pick
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#make-and-go-inside" title="Make and go inside" class="md-nav__link">
+    Make and go inside
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="build-tips">Build Tips</h1>
+<p>Here's a collective list of things you can try to improve your builds. Have fun!</p>
+<h2 id="repo-optimization-tips"><code>repo</code> optimization tips</h2>
+<h3 id="threads">Threads</h3>
+<p>By default, <code>repo</code> only utilizes four threads (or whatever the ROM manifest declares.) If you have a stronger machine with more threads, you can increase this number. So, for example, if you have 24 threads, you would type:</p>
+<pre><code>repo sync -j24
+</code></pre>
+<h3 id="current-history-only">Current history only</h3>
+<p>This should be set by default in your ROM manifest, but just in case, you can tell <code>repo</code> to only fetch recent changes. This allows for smaller downloads, which makes the sync quicker. Add the flag:</p>
+<pre><code>repo sync -c
+</code></pre>
+<h3 id="force">Force</h3>
+<p><strong>Warning! Dangerous option. Read before proceeding!</strong> Sometimes, your local history may go out of sync with remote repositories. This wouldn't be a problem if <code>repo</code> can handle it gracefully, but it doesn't and gives off a sync error. If you do not commit much, it may be worthwhile to add the force flags. Be warned though, <strong>any changes you make to the repositories WILL BE DELETED.</strong> Later down the line, if you commit a lot, you may want to remove this flag. To force sync, add the flag:</p>
+<pre><code>repo sync -f --force-sync
+</code></pre>
+<h3 id="minimal-fetch">Minimal fetch</h3>
+<p>To disable syncing clone bundles and tags, use:</p>
+<pre><code>repo sync --no-clone-bundle --no-tags
+</code></pre>
+<p>More documentation on this required, but for most developers these flags will be OK to use. This makes the sync faster as there is less information to sync over.</p>
+<h3 id="putting-it-all-together">Putting it all together</h3>
+<pre><code>repo sync -c -f -j24 --force-sync --no-clone-bundle --no-tags
+</code></pre>
+<p>That's quite long! How about we add this to our <code>.bashrc</code> as a alias? That way, we only have to type one phrase for <code>bash</code> to automatically type that out for us.</p>
+<p>Open up <code>~/.bashrc</code> and add these lines:</p>
+<pre><code># Alias to sync
+alias reposync='repo sync -c -f -j24 --force-sync --no-clone-bundle --no-tags'
+</code></pre>
+<p>This way, next time you want to sync, just type <code>reposync</code> and <code>bash</code> will substitute the command for you. Easy! Just don't forget to <code>source ~/.bashrc</code> otherwise <code>bash</code> will not know of this new alias.</p>
+<h2 id="reset-tree">Reset tree</h2>
+<p><strong>Warning! Very destructive tip. Do not use if you don't know what you are doing!</strong></p>
+<p>While messing around with device specific folders, you may break something and the build process might not work. Or, you may have multiple devices synced and you want to delete it all and start over. However, you might have limited bandwidth, and might not want to download the source over again.</p>
+<p>Add this function to your <code>~/.bashrc</code>:</p>
+<pre><code># Script to clean the source
+function resettree() {
+    rm -rf device kernel vendor out .repo/local_manifests
+    reposync
+}
+</code></pre>
+<p>Let's go over what this does, word by word:</p>
+<ul>
+<li><code>rm -rf</code>: Destructive command to erase all of the following:</li>
+<li><code>device</code> folder: Holds all device-related files</li>
+<li><code>kernel</code> folder: Holds all kernel-related files for devices</li>
+<li><code>vendor</code> folder: Holds all vendor-related files for devices AND ROM-specific vendor customizations</li>
+<li><code>out</code> folder: Stores artifacts of builds</li>
+<li><code>.repo/local_manifests</code> folder: Stores "manifest" information of devices to sync.</li>
+<li><code>reposync</code>: Executes the <code>repo sync</code> alias we made earlier.</li>
+</ul>
+<p>The last line is important, because by deleting the <code>vendor</code> folder, we also delete some crucial files for building Bliss. To fix that, we rerun a sync. Note that because we did not delete any other folders, syncing and updating files only take a fraction of a time compared to starting from scratch.</p>
+<p>To use this, after copying, don't forget to <code>source ~/.bashrc</code>. Then, run <code>resettree</code> at the base folder of the source code. Once you're done, don't forget to initialize a new device using <code>breakfast &lt;devicename&gt;</code>.</p>
+<h2 id="github-cherry-pick">GitHub cherry-pick</h2>
+<p>Thanks to @blueyes for providing the script!</p>
+<p>Copy the following into your <code>~/.bashrc</code>:</p>
+<pre><code>function gcp() {
+    COMMIT=`echo "$1" | cut -d/ -f6`
+    GH=`echo "$1" | cut -d/ -f1-3`
+    if [ "$COMMIT" != "commit" ]; then
+        echo -e "Please use a commit URL."
+    elif [ "$GH" != "https://github.com" ]; then
+        echo -e "Please use an https://github.com/ URL."
+    else
+        PROJECT=`echo "$1" | cut -d/ -f1-5`
+        git fetch $PROJECT
+        CP=`echo "$1" | cut -d/ -f7`
+        git cherry-pick $CP
+    fi
+}
+</code></pre>
+<p>To use this, <code>source ~/.bashrc</code> and then run <code>gcp &lt;GitHub commit URL here&gt;</code>.</p>
+<h2 id="make-and-go-inside">Make and go inside</h2>
+<p>This is a quick way to create and go inside a folder. Once again, copy this to your <code>~/.bashrc</code>:</p>
+<pre><code>function mkcdir ()
+{
+    mkdir -p -- "$1" &amp;&amp;
+    cd -P -- "$1"
+}
+</code></pre>
+<p>Don't forget to <code>source</code>, and run <code>mkcdir &lt;directory name&gt;</code>.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../build-guide/" title="BuildGuide" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                BuildGuide
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../common/" title="Index" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Index
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.245445c6.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>
