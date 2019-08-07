@@ -36,7 +36,7 @@
     
     
       
-        <title>BuildGuide - Team Bliss</title>
+        <title>Build Guide - Team Bliss</title>
       
     
     
@@ -75,7 +75,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#buildguide" tabindex="1" class="md-skip">
+      <a href="#build-guide" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -101,7 +101,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                BuildGuide
+                Build Guide
               
             </span>
           
@@ -207,6 +207,42 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Bliss OS/extras/" title="Extras" class="md-nav__link">
+      Extras
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Bliss OS/installation-guide/" title="Installation Guide" class="md-nav__link">
+      Installation Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Bliss OS/troubleshooting/" title="Troubleshooting" class="md-nav__link">
+      Troubleshooting
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -260,11 +296,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        BuildGuide
+        Build Guide
       </label>
     
-    <a href="./" title="BuildGuide" class="md-nav__link md-nav__link--active">
-      BuildGuide
+    <a href="./" title="Build Guide" class="md-nav__link md-nav__link--active">
+      Build Guide
     </a>
     
       
@@ -356,8 +392,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#i-get-an-error-about-no-bacon-targets-to-build-against-whats-wrong" title="I get an error about no bacon targets to build against, what's wrong?" class="md-nav__link">
-    I get an error about no bacon targets to build against, what's wrong?
+  <a href="#my-device-isnt-booting-and-userdebug-wont-print-any-adb-logcats-what-gives" title="My device isn't booting, and userdebug won't print any adb logcats. What gives?" class="md-nav__link">
+    My device isn't booting, and userdebug won't print any adb logcats. What gives?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-get-an-error-about-no-blissify-targets-to-build-against-whats-wrong" title="I get an error about no blissify targets to build against, what's wrong?" class="md-nav__link">
+    I get an error about no blissify targets to build against, what's wrong?
   </a>
   
 </li>
@@ -467,6 +510,18 @@
   <li class="md-nav__item">
     <a href="../../common/git-started/" title="Git Started" class="md-nav__link">
       Git Started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/using-dippy-bird/" title="Using `dippy-bird`" class="md-nav__link">
+      Using `dippy-bird`
     </a>
   </li>
 
@@ -611,8 +666,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#i-get-an-error-about-no-bacon-targets-to-build-against-whats-wrong" title="I get an error about no bacon targets to build against, what's wrong?" class="md-nav__link">
-    I get an error about no bacon targets to build against, what's wrong?
+  <a href="#my-device-isnt-booting-and-userdebug-wont-print-any-adb-logcats-what-gives" title="My device isn't booting, and userdebug won't print any adb logcats. What gives?" class="md-nav__link">
+    My device isn't booting, and userdebug won't print any adb logcats. What gives?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-get-an-error-about-no-blissify-targets-to-build-against-whats-wrong" title="I get an error about no blissify targets to build against, what's wrong?" class="md-nav__link">
+    I get an error about no blissify targets to build against, what's wrong?
   </a>
   
 </li>
@@ -672,29 +734,26 @@
               
                 
                 
-                <h1 id="buildguide">BuildGuide</h1>
+                <h1 id="build-guide">Build Guide</h1>
 <h2 id="updated-for-pie-p90">Updated for Pie (p9.0)</h2>
 <h3 id="introduction">Introduction</h3>
 <p>This is the official guide to build BlissRoms for your device. In this guide, we will only cover official devices with actual maintainers. We will not delve into porting devices.</p>
 <p>The golden rule to building is patience. If something breaks, wait for your maintainer to fix it, send a polite message to your maintainer, or better yet, try and fix it yourself. Then you can make a merge request and contribute!</p>
 <p>Let’s get started.</p>
 <h3 id="preparation">Preparation</h3>
-<p>Prerequisites of this guide: Linux box, at least 200GB space of HDD, at least 8GB RAM. A decent CPU (or CPUs if you have a server motherboard) is recommended.</p>
-<p>You may try building on crappy hardware but there is no guarantee your build will succeed or even function at all.</p>
+<p>To get started, you need a computer with Ubuntu 18.04 (LTS), at least 200GB space of HDD, and at least 8GB RAM. A decent CPU (or CPUs if you have a server motherboard) is recommended. Other distros can work but is not officially supported in this guide.</p>
+<p>Underpowered machines may crash during compilation. If that happens, you may try and restart the build as most crashes are caused by lack of memory. If your storage space has run out, then you will need to build on a different hard drive.</p>
 <h3 id="install-the-jdk">Install the JDK</h3>
 <p>Install OpenJDK:</p>
 <pre><code>sudo apt install openjdk-8-jdk
 </code></pre>
 <h3 id="install-build-tools">Install build tools</h3>
-<p>For Ubuntu 16.x:</p>
-<pre><code>sudo apt install bison build-essential curl flex git gnupg gperf libesd0-dev liblz4-tool libncurses5-dev libsdl1.2-dev libwxgtk3.0-dev libxml2 libxml2-utils lzop maven pngcrush schedtool squashfs-tools xsltproc zip zlib1g-dev g++-multilib gcc-multilib lib32ncurses5-dev lib32readline6-dev lib32z1-dev git-core libc6-dev-i386 x11proto-core-dev libx11-dev lib32z-dev ccache libgl1-mesa-dev unzip
-</code></pre>
-<p>For Ubuntu 18.x (or newer):</p>
-<pre><code>sudo apt install bison build-essential curl flex git gnupg gperf liblz4-tool libncurses5-dev libsdl1.2-dev libwxgtk3.0-dev libxml2 libxml2-utils lzop maven pngcrush schedtool squashfs-tools xsltproc zip zlib1g-dev g++-multilib gcc-multilib lib32ncurses5-dev lib32readline-dev lib32z1-dev libc6-dev-i386 x11proto-core-dev libx11-dev ccache libgl1-mesa-dev unzip python
+<p>To install the required build tools, run the following command:</p>
+<pre><code>sudo apt install git gnupg flex bison gperf build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z-dev lib32z1-dev ccache libgl1-mesa-dev libxml2 libxml2-utils xsltproc unzip squashfs-tools python python-mako libssl-dev ninja-build lunzip syslinux syslinux-utils gettext genisoimage bc xorriso liblz4-tool libncurses5-dev libsdl1.2-dev libwxgtk3.0-dev lzop maven pngcrush schedtool lib32readline-dev
 </code></pre>
 <h3 id="install-source-code-tools">Install source code tools</h3>
-<p>Now we need to get the source code via a program named <code>repo</code>, made by Google. The primary function of <code>repo</code> is to read a manifest file located in Bliss's GitHub, and find what repositories you need to actually build Android.</p>
-<p>Create a <code>~/bin</code> directory for <code>repo</code> to live in:</p>
+<p>Now we need to get the source code via a program named <code>repo</code>, made by Google. The primary function of <code>repo</code> is to read a manifest file located in BlissRoms's GitHub organization, and find what repositories you need to actually build Android.</p>
+<p>Create a <code>~/bin</code> directory for <code>repo</code>:</p>
 <pre><code>mkdir -p ~/bin
 </code></pre>
 <p>The <code>-p</code> flag instructs <code>mkdir</code> to <em>only</em> create the directory if it does not exist in the first place. Now download the <code>repo</code> tool into <code>~/bin</code>:</p>
@@ -761,26 +820,32 @@ git config --global user.name “Randy McRandyface”
 <pre><code>croot
 </code></pre>
 <p>will dump you back in the root of the source code tree. So if you’ve been going through folders and don’t have any idea where you are, you can use the above command. This command, however, requires you to have <code>source</code>d <code>build/envsetup.sh</code> earlier.</p>
-<p>So we’re ready to build! Run</p>
-<pre><code>brunch bullhead
+<p>We're ready to build, but before we teach you the easy command to execute a build, we will first try the manual method. To set up the current terminal environment for building your particular device, execute:</p>
+<pre><code>lunch bliss_bullhead-userdebug
 </code></pre>
-<p>But what is <code>brunch</code>? It is a compact form of these commands:</p>
+<p>Let's break down the command. <code>lunch</code> initializes the proper environmental variables required for the build tools to build your specific device. Things like <code>BLISS_DEVICE</code> and other variables are set in this stage, and the changed variables will be shown as output. <code>bliss_</code> is the ROM that we are building. As convention, all devices will have this prefix. <code>bullhead</code> is the specific device we are building - in this case, the Nexus 5X. Finally, <code>userdebug</code> means that we will build a user-debuggable variant. This is usually what most ROMs use for publishing their builds. Manufacturers typically use <code>user</code> which disables most of the useful Android Logcats.</p>
+<h4 id="my-device-isnt-booting-and-userdebug-wont-print-any-adb-logcats-what-gives">My device isn't booting, and <code>userdebug</code> won't print any <code>adb logcat</code>s. What gives?</h4>
+<p>There is a third build variant called <code>eng</code>, short for engineering builds. These builds will activate <code>adb logcat</code> during boot, and will show you exactly what is going wrong, where, and why. However, these builds are <strong>NOT</strong> recommended for normal usage as they are not securely hardened, have log spam that will slow down your device, and other unexpected problems like userspace utilities crashing during runtime. If you want to submit your device for mainline, do <strong>NOT</strong> submit an <code>eng</code> build!</p>
+<p>All set? Let's start the building process. Run:</p>
+<p><code>make blissify</code></p>
+<p>And the build should start. The build process will take a long time. Prepare to wait a few hours, even on a decent machine.</p>
+<h4 id="i-get-an-error-about-no-blissify-targets-to-build-against-whats-wrong">I get an error about no <code>blissify</code> targets to build against, what's wrong?</h4>
+<p>If you are building other ROMs, it is usually <code>make bacon</code>. For BlissRoms, we chose the build target of <code>blissify</code>. If that doesn't work, sometimes there is a bug, or the ROM developers do not implement a <code>bacon</code> target to build against. In this case, you will need to find what name they use to initialize a full build of the ROM. Conventionally, it is supposed to be <code>bacon</code>, but some ROM developers change this name inadvertently, or actually have a bug that causes the build target to never be found. If you cannot locate the build target, ask the developers of the ROM. Alternatively, you can try poking around in <code>build/make/core/Makefile</code> to see what the build target name is. But this is out of the scope of this article as you're not supposed to be building other ROMs (that's not what this tutorial is for, sorry!)</p>
+<p>All right, but that's annoying. You had to type <strong>three</strong> commands to build it all. What about running one command?</p>
+<pre><code>blissify bullhead
+</code></pre>
+<p>But what is <code>blissify</code>? It is a compact form of these commands:</p>
 <pre><code>breakfast bullhead
-mka bacon
+lunch bliss_bullhead-userdebug
+make blissify
 </code></pre>
-<p><code>brunch</code> will automatically pull the device trees again or check if it’s there already by running <code>breakfast</code>. Then it’ll call upon the build system to build a full <code>.zip</code> for your device.</p>
-<p>Therefore, if you have already run <code>breakfast</code>, you can just run:</p>
-<pre><code>mka bacon
-</code></pre>
-<p>The build process will take a long time. Prepare to wait a few hours, even on a decent machine.</p>
-<h4 id="i-get-an-error-about-no-bacon-targets-to-build-against-whats-wrong">I get an error about no <code>bacon</code> targets to build against, what's wrong?</h4>
-<p>Sometimes there is a bug, or the ROM developers do not implement a <code>bacon</code> target to build against. In this case, you will need to find what name they use to initialize a full build of the ROM. Conventionally, it is supposed to be <code>bacon</code>, but some ROM developers change this name inadvertently, or actually have a bug that causes the build target to never be found. If you cannot locate the build target, ask the developers of the ROM. Alternatively, you can try poking around in <code>build/make/core/Makefile</code> to see what the build target name is.</p>
+<p>Sounds great, right? Once you have run the command, jump over to the next section.</p>
 <h3 id="after-building">After building</h3>
 <p>There are two outcomes to a build - either it fails and you get a red error message from <code>make</code>, or it succeeds and you see the Bliss logo in ASCII. If you encounter the former, you need to go back and fix whatever it's complaining about. Typically, 90% of the time the problem will be in your device tree. For the other 10%, submit a bug report to the ROM developers. Be sure to include the full log of your build to help diagnose the problem, and your device tree.</p>
 <p>If you face the latter, congratulations! You've successfully built BlissRoms for your device. Grab the artifacts for your device:</p>
 <pre><code>cd out/target/product/bullhead/
 </code></pre>
-<p>In here, you’ll find a <code>.zip</code> that goes along the lines of <code>Bliss-v11.5-Stable-bullhead-UNOFFICIAL-20180213-0621.zip</code>. Install TWRP, flash the build to your device, and enjoy!</p>
+<p>In here, you’ll find a <code>.zip</code> that goes along the lines of <code>Bliss-v11.9-Stable-bullhead-UNOFFICIAL-20190531.zip</code>. Install TWRP, flash the build to your device, and enjoy!</p>
 <h3 id="troubleshooting">Troubleshooting</h3>
 <p>If your build failed, there are a couple things you can try.</p>
 <ul>
@@ -789,7 +854,7 @@ mka bacon
 <li>Make sure you sourced <code>build/envsetup.sh</code>. This is especially common and worth suspecting if none of the build commands like <code>breakfast</code> and <code>lunch</code> work. If you have <code>repo sync</code>ed do this again.</li>
 <li>Make sure you’re at the root of the build tree. Again, to quickly jump there, use <code>croot</code>.</li>
 <li>Make sure you ran <code>breakfast</code> correctly and it did not error out. Missing device files will prevent successful builds.</li>
-<li>Make sure your computer itself isn’t faulty. HDDs usually die first, followed by RAM. SSDs rarely die but failure is not unheard of.  In extremely rare cases, your CPU may have a defect. If you're unsure, run a stress test via a program like Prime95.</li>
+<li>Make sure your computer itself isn’t faulty. HDDs usually die first, followed by RAM. SSDs rarely die but failure is not unheard of.  In extremely rare cases, your CPU may have a defect. If you're unsure, run a stress test using a program like Prime95.</li>
 </ul>
 <p>If something goes wrong and you've tried everything above, first use Google to look up your error! Most of the errors you encounter is due to misconfiguration and wrong commands entered. More often than not, Google will have the answer you are looking for. If you're still stuck and nothing fixes the problem, then ask us via our Telegram Build Support chat.</p>
 <h3 id="conclusion">Conclusion</h3>
