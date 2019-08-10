@@ -170,8 +170,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="Welcome to the wiki!" class="md-nav__link">
-      Welcome to the wiki!
+    <a href="../.." title="Index" class="md-nav__link">
+      Index
     </a>
   </li>
 
@@ -381,6 +381,19 @@
     Download
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#i-still-dont-know-how-much-cpu-threads-i-have-how-do-i-check" title="I still don't know how much CPU threads I have. How do I check?" class="md-nav__link">
+    I still don't know how much CPU threads I have. How do I check?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -394,6 +407,13 @@
           <li class="md-nav__item">
   <a href="#my-device-isnt-booting-and-userdebug-wont-print-any-adb-logcats-what-gives" title="My device isn't booting, and userdebug won't print any adb logcats. What gives?" class="md-nav__link">
     My device isn't booting, and userdebug won't print any adb logcats. What gives?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-mka-and-not-make" title="Why mka and not make?" class="md-nav__link">
+    Why mka and not make?
   </a>
   
 </li>
@@ -655,6 +675,19 @@
     Download
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#i-still-dont-know-how-much-cpu-threads-i-have-how-do-i-check" title="I still don't know how much CPU threads I have. How do I check?" class="md-nav__link">
+    I still don't know how much CPU threads I have. How do I check?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -668,6 +701,13 @@
           <li class="md-nav__item">
   <a href="#my-device-isnt-booting-and-userdebug-wont-print-any-adb-logcats-what-gives" title="My device isn't booting, and userdebug won't print any adb logcats. What gives?" class="md-nav__link">
     My device isn't booting, and userdebug won't print any adb logcats. What gives?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-mka-and-not-make" title="Why mka and not make?" class="md-nav__link">
+    Why mka and not make?
   </a>
   
 </li>
@@ -806,6 +846,12 @@ git config --global user.name “Randy McRandyface”
 <pre><code>repo sync -j4 -c
 </code></pre>
 <p><code>-c</code> is for pulling in only the current branch, instead of the entire history. This is useful if you need the downloads fast and don’t want the entire history to be downloaded. This is used by default unless specified otherwise.</p>
+<h4 id="i-still-dont-know-how-much-cpu-threads-i-have-how-do-i-check">I still don't know how much CPU threads I have. How do I check?</h4>
+<p>Run <code>nproc</code>. The output should be something like this:</p>
+<pre><code>rwaterspf1@test:~$ nproc
+24
+</code></pre>
+<p>This means that there are 24 threads in your machine.</p>
 <p><code>repo</code> will start downloading all the code. That’s going to be slow, even on a fiber network. Expect downloads to take more than a couple hours.</p>
 <h3 id="build">Build</h3>
 <p>Set up the build environment:</p>
@@ -827,8 +873,11 @@ git config --global user.name “Randy McRandyface”
 <h4 id="my-device-isnt-booting-and-userdebug-wont-print-any-adb-logcats-what-gives">My device isn't booting, and <code>userdebug</code> won't print any <code>adb logcat</code>s. What gives?</h4>
 <p>There is a third build variant called <code>eng</code>, short for engineering builds. These builds will activate <code>adb logcat</code> during boot, and will show you exactly what is going wrong, where, and why. However, these builds are <strong>NOT</strong> recommended for normal usage as they are not securely hardened, have log spam that will slow down your device, and other unexpected problems like userspace utilities crashing during runtime. If you want to submit your device for mainline, do <strong>NOT</strong> submit an <code>eng</code> build!</p>
 <p>All set? Let's start the building process. Run:</p>
-<p><code>make blissify</code></p>
+<p><code>mka blissify</code></p>
 <p>And the build should start. The build process will take a long time. Prepare to wait a few hours, even on a decent machine.</p>
+<h4 id="why-mka-and-not-make">Why <code>mka</code> and not <code>make</code>?</h4>
+<p><code>make</code> only runs with 1 thread. <code>mka</code> is properly aliased to use all of your threads by checking <code>nproc</code>.</p>
+<p>If you want to customize your thread count (maybe you're building with a fan-screaming laptop in a quiet coffee shop), use <code>make -j#</code>, replacing the hash with the number of threads (example of <code>make -j4</code>).</p>
 <h4 id="i-get-an-error-about-no-blissify-targets-to-build-against-whats-wrong">I get an error about no <code>blissify</code> targets to build against, what's wrong?</h4>
 <p>If you are building other ROMs, it is usually <code>make bacon</code>. For BlissRoms, we chose the build target of <code>blissify</code>. If that doesn't work, sometimes there is a bug, or the ROM developers do not implement a <code>bacon</code> target to build against. In this case, you will need to find what name they use to initialize a full build of the ROM. Conventionally, it is supposed to be <code>bacon</code>, but some ROM developers change this name inadvertently, or actually have a bug that causes the build target to never be found. If you cannot locate the build target, ask the developers of the ROM. Alternatively, you can try poking around in <code>build/make/core/Makefile</code> to see what the build target name is. But this is out of the scope of this article as you're not supposed to be building other ROMs (that's not what this tutorial is for, sorry!)</p>
 <p>All right, but that's annoying. You had to type <strong>three</strong> commands to build it all. What about running one command?</p>
