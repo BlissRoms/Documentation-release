@@ -13,3 +13,4 @@ rm -r infrastructure
 rm -r assets
 rm -r search
 
+echo "Finished cleaning. Copy the new artifacts here."
