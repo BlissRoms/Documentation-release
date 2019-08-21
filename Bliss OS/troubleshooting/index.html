@@ -531,6 +531,7 @@
 <li><code>buildvariant=eng, user, userdebug</code>: This is the commandline parameter to run the current build as <code>eng</code>, <code>userdebug</code>, or <code>user</code> </li>
 <li><code>DPI=xxx</code>: This will manually set the DPI on init. Use this if things are too big/small for you.</li>
 <li><code>fbcon=variablename</code>: This is to configure framebuffer to use various options. Usually used to help fix video settings, etc. Even default rotation on some Atom tablets. Example: <code>video=efifb fbcon=rotate:1</code></li>
+<li><code>VULKAN=1</code>: Required for Vulkan-supported chipsets. This enables <code>hwcomposer</code> to work right with screenshots and other things.</li>
 </ul>
 <p>As an example, here are a few of the boot options used in testing:</p>
 <pre><code>menuentry 'Bliss-x86 Test-Oreo' --class bliss {
