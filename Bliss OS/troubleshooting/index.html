@@ -529,13 +529,13 @@
                 <h1 id="troubleshooting">Troubleshooting</h1>
 <h2 id="32-bit-processors-only-intel-atom-and-similar">32-bit processors only (Intel Atom and similar)</h2>
 <ol>
-<li>Install Android-x86 32-bit OS from https://www.android-x86.org/ (doesn't matter which version, as long as it's 32-bit)</li>
+<li>Install <a href="https://www.android-x86.org/">Android-x86 32-bit OS from here</a> (doesn't matter which version, as long as it's 32-bit)</li>
 <li>Update with Bliss OS 32-bit (current version is 11.9). After reboot you should be able to access the <code>grub</code> menu.</li>
 <li>In <code>grub</code> menu select "Debug mode"</li>
 <li>Run the following commands:
     <pre><code>mount -o remount, rw /mnt
 cd /mnt/grub
-vi menu.lst</code></pre></li>
+nano menu.lst</code></pre></li>
 <li>Add <code>nomodeset</code> before every "SCR=**" line. For example, your configuration should look something like this:
     <pre><code>nomodeset
 SCR=700
