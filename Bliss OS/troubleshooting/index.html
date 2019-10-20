@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
     
     
       
@@ -40,7 +40,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.0284f74d.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.30686662.css">
       
       
     
@@ -145,7 +145,7 @@
         
       
       
-      <main class="md-main">
+      <main class="md-main" role="main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
             
@@ -278,7 +278,14 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#grub2-kernel-parameters-and-options" title="grub2 kernel parameters and options" class="md-nav__link">
+  <a href="#32-bit-processors-only-intel-atom-and-similar" class="md-nav__link">
+    32-bit processors only (Intel Atom and similar)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grub2-kernel-parameters-and-options" class="md-nav__link">
     grub2 kernel parameters and options
   </a>
   
@@ -489,7 +496,14 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#grub2-kernel-parameters-and-options" title="grub2 kernel parameters and options" class="md-nav__link">
+  <a href="#32-bit-processors-only-intel-atom-and-similar" class="md-nav__link">
+    32-bit processors only (Intel Atom and similar)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grub2-kernel-parameters-and-options" class="md-nav__link">
     grub2 kernel parameters and options
   </a>
   
@@ -513,6 +527,26 @@
                 
                 
                 <h1 id="troubleshooting">Troubleshooting</h1>
+<h2 id="32-bit-processors-only-intel-atom-and-similar">32-bit processors only (Intel Atom and similar)</h2>
+<ol>
+<li>Install Android-x86 32-bit OS from https://www.android-x86.org/ (doesn't matter which version, as long as it's 32-bit)</li>
+<li>Update with Bliss OS 32-bit (current version is 11.9). After reboot you should be able to access the <code>grub</code> menu.</li>
+<li>In <code>grub</code> menu select "Debug mode"</li>
+<li>Run the following commands:
+    <pre><code>mount -o remount, rw /mnt
+cd /mnt/grub
+vi menu.lst</code></pre></li>
+<li>Add <code>nomodeset</code> before every "SCR=**" line. For example, your configuration should look something like this:
+    <pre><code>nomodeset
+SCR=700
+nomodeset
+SCR=716
+nomodeset
+SCR=795</code></pre></li>
+<li>Press Ctrl+O to save, and then Ctrl+X to close.</li>
+<li>Type <code>reboot -f</code></li>
+</ol>
+<p>You should be finished! If all goes well you will boot into Bliss OS on your 32-bit machine.</p>
 <h2 id="grub2-kernel-parameters-and-options"><code>grub2</code> kernel parameters and options</h2>
 <p><strong>You will want to pay attention here!</strong> With Bliss OS on the PC, we tend to use quite a few command line options to get things working right. We've gathered a few of them here to explain them a little bit.</p>
 <p><a href="https://www.kernel.org/doc/Documentation/admin-guide/kernel-parameters.txt">A full list of available kernel parameters can be found here.</a></p>
@@ -645,7 +679,7 @@ menuentry 'Bliss-x86 Test-Oreo - debug=2' --class bliss {
       
     </div>
     
-      <script src="../../assets/javascripts/application.245445c6.js"></script>
+      <script src="../../assets/javascripts/application.ac79c3b0.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
