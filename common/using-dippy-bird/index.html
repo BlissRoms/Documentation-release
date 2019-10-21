@@ -438,6 +438,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#submitting-commits-admins-only" class="md-nav__link">
+    Submitting commits (admins only)
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -544,6 +551,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#submitting-commits-admins-only" class="md-nav__link">
+    Submitting commits (admins only)
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -593,6 +607,16 @@
 <li>Has the topic <code>test</code></li>
 </ul>
 <p>And will apply +2 code-review and +1 verify, indicating that you have tested the commits on an actual device. This means that the commits are now ready for merging.</p>
+<h3 id="submitting-commits-admins-only">Submitting commits (admins only)</h3>
+<p>To submit commits that are already reviewed, run:</p>
+<pre><code>php dippy-bird.php --username=jackeagle --server=review.blissroms.com --port=29418 -q="status:open topic:test" -a=submit
+</code></pre>
+<p>This will submit all commits that match the following criteria:</p>
+<ul>
+<li>Is open for review (not closed, merged, or abandoned)</li>
+<li>Has the topic <code>test</code></li>
+</ul>
+<p>And will push them to our main GitHub. If the commits are not reviewed yet, or if they do not have the verified tag, this command will fail for the patchsets that are not reviewed yet. Other commits will still be merged.</p>
                 
                   
                 
