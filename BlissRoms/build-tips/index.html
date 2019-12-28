@@ -353,6 +353,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#current-branch-only" class="md-nav__link">
+    Current branch only
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#current-history-only" class="md-nav__link">
     Current history only
   </a>
@@ -367,8 +374,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#putting-it-all-together" class="md-nav__link">
-    Putting it all together
+  <a href="#reposync-alias" class="md-nav__link">
+    reposync alias
   </a>
   
 </li>
@@ -379,8 +386,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#reset-tree" class="md-nav__link">
-    Reset tree
+  <a href="#delete-all-device-trees-and-local-manifests" class="md-nav__link">
+    Delete all device trees and local manifests
   </a>
   
 </li>
@@ -388,13 +395,6 @@
         <li class="md-nav__item">
   <a href="#github-cherry-pick" class="md-nav__link">
     GitHub cherry-pick
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#make-and-go-inside" class="md-nav__link">
-    Make and go inside
   </a>
   
 </li>
@@ -559,6 +559,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#current-branch-only" class="md-nav__link">
+    Current branch only
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#current-history-only" class="md-nav__link">
     Current history only
   </a>
@@ -573,8 +580,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#putting-it-all-together" class="md-nav__link">
-    Putting it all together
+  <a href="#reposync-alias" class="md-nav__link">
+    reposync alias
   </a>
   
 </li>
@@ -585,8 +592,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#reset-tree" class="md-nav__link">
-    Reset tree
+  <a href="#delete-all-device-trees-and-local-manifests" class="md-nav__link">
+    Delete all device trees and local manifests
   </a>
   
 </li>
@@ -594,13 +601,6 @@
         <li class="md-nav__item">
   <a href="#github-cherry-pick" class="md-nav__link">
     GitHub cherry-pick
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#make-and-go-inside" class="md-nav__link">
-    Make and go inside
   </a>
   
 </li>
@@ -626,32 +626,40 @@
 <p>Here's a collective list of things you can try to improve your builds. Have fun!</p>
 <h2 id="repo-optimization-tips"><code>repo</code> optimization tips</h2>
 <h3 id="threads">Threads</h3>
-<p>By default, <code>repo</code> only utilizes four threads (or whatever the ROM manifest declares.) If you have a stronger machine with more threads, you can increase this number. So, for example, if you have 24 threads, you would type:</p>
-<pre><code>repo sync -j24
+<p>By default, <code>repo</code> only utilizes four threads (or whatever the ROM manifest declares.) If you have a stronger machine with more threads, you can increase this number. For example, to use 8 threads:</p>
+<pre><code>repo sync -j8
 </code></pre>
-<h3 id="current-history-only">Current history only</h3>
-<p>This should be set by default in your ROM manifest, but just in case, you can tell <code>repo</code> to only fetch recent changes. This allows for smaller downloads, which makes the sync quicker. Add the flag:</p>
+<p>To use all of the threads on your machine, use:</p>
+<pre><code>repo sync -j$(nproc --all)
+</code></pre>
+<h3 id="current-branch-only">Current branch only</h3>
+<p>This is usually set by default in your ROM manifest, but just in case, you can tell <code>repo</code> to only fetch the branch you want to work on:</p>
 <pre><code>repo sync -c
 </code></pre>
+<h3 id="current-history-only">Current history only</h3>
+<p>To only download the most recent changes, use this flag:</p>
+<pre><code>repo sync --depth=1
+</code></pre>
+<p>This will make <code>repo</code> fetch the most recent changes.</p>
 <h3 id="minimal-fetch">Minimal fetch</h3>
 <p>To disable syncing clone bundles and tags, use:</p>
 <pre><code>repo sync --no-clone-bundle --no-tags
 </code></pre>
-<p>More documentation on this required, but for most developers these flags will be OK to use. This makes the sync faster as there is less information to sync over.</p>
-<h3 id="putting-it-all-together">Putting it all together</h3>
-<pre><code>repo sync -c -j24 --no-clone-bundle --no-tags
+<p><code>repo</code> uses <code>git</code> bundles over HTTP to download repositories. To disable this behavior, we use the <code>--no-clone-bundle</code> flag. We also don't need all of the <code>git</code> tags in each repository, so we disable that too with <code>--no-tags</code>.</p>
+<h3 id="reposync-alias"><code>reposync</code> alias</h3>
+<pre><code>repo sync -c -j$(nproc --all) --no-clone-bundle --no-tags
 </code></pre>
 <p>That's quite long! How about we add this to our <code>.bashrc</code> as a alias? That way, we only have to type one phrase for <code>bash</code> to automatically type that out for us.</p>
 <p>Open up <code>~/.bashrc</code> and add these lines:</p>
 <pre><code># Alias to sync
-alias reposync='repo sync -c -j24 --no-clone-bundle --no-tags'
+alias reposync='repo sync -c -j$(nproc --all) --no-clone-bundle --no-tags'
 </code></pre>
 <p>This way, next time you want to sync, just type <code>reposync</code> and <code>bash</code> will substitute the command for you. Easy! Just don't forget to <code>source ~/.bashrc</code> otherwise <code>bash</code> will not know of this new alias.</p>
-<h2 id="reset-tree">Reset tree</h2>
-<p><strong>Warning! Very destructive tip. Do not use if you don't know what you are doing!</strong></p>
-<p>While messing around with device specific folders, you may break something and the build process might not work. Or, you may have multiple devices synced and you want to delete it all and start over. However, you might have limited bandwidth, and might not want to download the source over again.</p>
+<h2 id="delete-all-device-trees-and-local-manifests">Delete all device trees and local manifests</h2>
+<p><strong>WARNING</strong>: If you have any changes in your device trees, commit them and push them to a remote repository. This tip will permanently delete your local changes, so back them up!</p>
+<p>While messing around with device specific folders, you may break something and the build process might not work. Or, you may have multiple devices synced and you want to delete it all and start over. This tip/command will let you delete only the device trees.</p>
 <p>Add this function to your <code>~/.bashrc</code>:</p>
-<pre><code># Script to clean the source
+<pre><code># Remove all device trees/local manifests
 function resettree() {
     rm -rf device kernel vendor out .repo/local_manifests
     reposync
@@ -668,7 +676,7 @@ function resettree() {
 <li><code>reposync</code>: Executes the <code>repo sync</code> alias we made earlier.</li>
 </ul>
 <p>The last line is important, because by deleting the <code>vendor</code> folder, we also delete some crucial files for building Bliss. To fix that, we rerun a sync. Note that because we did not delete any other folders, syncing and updating files only take a fraction of a time compared to starting from scratch.</p>
-<p>To use this, after copying, don't forget to <code>source ~/.bashrc</code>. Then, run <code>resettree</code> at the base folder of the source code. Once you're done, don't forget to initialize a new device using <code>breakfast &lt;devicename&gt;</code>.</p>
+<p>After running <code>resettree</code>, make sure to initialize a new tree by running <code>breakfast &lt;devicename&gt;</code>.</p>
 <h2 id="github-cherry-pick">GitHub cherry-pick</h2>
 <p>Thanks to @blueyes for providing the script!</p>
 <p>Copy the following into your <code>~/.bashrc</code>:</p>
@@ -688,15 +696,6 @@ function resettree() {
 }
 </code></pre>
 <p>To use this, <code>source ~/.bashrc</code> and then run <code>gcp &lt;GitHub commit URL here&gt;</code>.</p>
-<h2 id="make-and-go-inside">Make and go inside</h2>
-<p>This is a quick way to create and go inside a folder. Once again, copy this to your <code>~/.bashrc</code>:</p>
-<pre><code>function mkcdir ()
-{
-    mkdir -p -- "$1" &amp;&amp;
-    cd -P -- "$1"
-}
-</code></pre>
-<p>Don't forget to <code>source</code>, and run <code>mkcdir &lt;directory name&gt;</code>.</p>
                 
                   
                 
