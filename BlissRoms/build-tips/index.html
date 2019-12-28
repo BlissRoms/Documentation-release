@@ -360,13 +360,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#force" class="md-nav__link">
-    Force
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#minimal-fetch" class="md-nav__link">
     Minimal fetch
   </a>
@@ -573,13 +566,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#force" class="md-nav__link">
-    Force
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#minimal-fetch" class="md-nav__link">
     Minimal fetch
   </a>
@@ -647,22 +633,18 @@
 <p>This should be set by default in your ROM manifest, but just in case, you can tell <code>repo</code> to only fetch recent changes. This allows for smaller downloads, which makes the sync quicker. Add the flag:</p>
 <pre><code>repo sync -c
 </code></pre>
-<h3 id="force">Force</h3>
-<p><strong>Warning! Dangerous option. Read before proceeding!</strong> Sometimes, your local history may go out of sync with remote repositories. This wouldn't be a problem if <code>repo</code> can handle it gracefully, but it doesn't and gives off a sync error. If you do not commit much, it may be worthwhile to add the force flags. Be warned though, <strong>any changes you make to the repositories WILL BE DELETED.</strong> Later down the line, if you commit a lot, you may want to remove this flag. To force sync, add the flag:</p>
-<pre><code>repo sync -f --force-sync
-</code></pre>
 <h3 id="minimal-fetch">Minimal fetch</h3>
 <p>To disable syncing clone bundles and tags, use:</p>
 <pre><code>repo sync --no-clone-bundle --no-tags
 </code></pre>
 <p>More documentation on this required, but for most developers these flags will be OK to use. This makes the sync faster as there is less information to sync over.</p>
 <h3 id="putting-it-all-together">Putting it all together</h3>
-<pre><code>repo sync -c -f -j24 --force-sync --no-clone-bundle --no-tags
+<pre><code>repo sync -c -j24 --no-clone-bundle --no-tags
 </code></pre>
 <p>That's quite long! How about we add this to our <code>.bashrc</code> as a alias? That way, we only have to type one phrase for <code>bash</code> to automatically type that out for us.</p>
 <p>Open up <code>~/.bashrc</code> and add these lines:</p>
 <pre><code># Alias to sync
-alias reposync='repo sync -c -f -j24 --force-sync --no-clone-bundle --no-tags'
+alias reposync='repo sync -c -j24 --no-clone-bundle --no-tags'
 </code></pre>
 <p>This way, next time you want to sync, just type <code>reposync</code> and <code>bash</code> will substitute the command for you. Easy! Just don't forget to <code>source ~/.bashrc</code> otherwise <code>bash</code> will not know of this new alias.</p>
 <h2 id="reset-tree">Reset tree</h2>
