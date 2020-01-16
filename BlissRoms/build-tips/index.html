@@ -374,6 +374,26 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#force-sync" class="md-nav__link">
+    Force sync
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-not-use-f-as-well" class="md-nav__link">
+    Why not use -f as well?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#reposync-alias" class="md-nav__link">
     reposync alias
   </a>
@@ -580,6 +600,26 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#force-sync" class="md-nav__link">
+    Force sync
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-not-use-f-as-well" class="md-nav__link">
+    Why not use -f as well?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#reposync-alias" class="md-nav__link">
     reposync alias
   </a>
@@ -646,6 +686,13 @@
 <pre><code>repo sync --no-clone-bundle --no-tags
 </code></pre>
 <p><code>repo</code> uses <code>git</code> bundles over HTTP to download repositories. To disable this behavior, we use the <code>--no-clone-bundle</code> flag. We also don't need all of the <code>git</code> tags in each repository, so we disable that too with <code>--no-tags</code>.</p>
+<h3 id="force-sync">Force sync</h3>
+<p>Sometimes, bad Internet conditions may cause your <code>.repo</code> directory to become corrupt and not sync. <code>repo</code> keeps two copies of a repository - one under <code>.repo</code>, and one in the root of your source directory. If the repository in <code>.repo</code> is corrupted, it will not sync over to the source directory.</p>
+<p>To resolve this problem, you need to sometimes tell <code>repo</code> to forcefully sync the repository in <code>.repo</code> again with the remote repository so that changes can be synced over to the main source tree. Use the <code>--force-sync</code> flag to achieve this:</p>
+<pre><code>repo sync --force-sync
+</code></pre>
+<h4 id="why-not-use-f-as-well">Why not use <code>-f</code> as well?</h4>
+<p>Starting from <code>repo</code> 1.26, the use of the flags <code>-f</code> and <code>--force-sync</code> together has been deprecated. <code>repo</code> will warn you of this change if you try and use those two flags together. To make sure your scripts do not break in future <code>repo</code> versions, it is recommended to not use the <code>-f</code> flag at all.</p>
 <h3 id="reposync-alias"><code>reposync</code> alias</h3>
 <pre><code>repo sync -c -j$(nproc --all) --no-clone-bundle --no-tags
 </code></pre>

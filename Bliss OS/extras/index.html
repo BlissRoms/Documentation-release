@@ -262,7 +262,7 @@
       
         <li class="md-nav__item">
   <a href="#setting-up-gapps" class="md-nav__link">
-    Setting up Gapps
+    Setting up GApps
   </a>
   
 </li>
@@ -270,6 +270,13 @@
         <li class="md-nav__item">
   <a href="#watching-netflix-foss-gms-builds" class="md-nav__link">
     Watching Netflix - FOSS &amp; GMS Builds
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-magisk" class="md-nav__link">
+    Setting up Magisk
   </a>
   
 </li>
@@ -511,7 +518,7 @@
       
         <li class="md-nav__item">
   <a href="#setting-up-gapps" class="md-nav__link">
-    Setting up Gapps
+    Setting up GApps
   </a>
   
 </li>
@@ -519,6 +526,13 @@
         <li class="md-nav__item">
   <a href="#watching-netflix-foss-gms-builds" class="md-nav__link">
     Watching Netflix - FOSS &amp; GMS Builds
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-magisk" class="md-nav__link">
+    Setting up Magisk
   </a>
   
 </li>
@@ -546,10 +560,52 @@
 <p>Here's a video tutorial on how to do it properly:</p>
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/htFC8poBEPY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<h2 id="setting-up-gapps">Setting up Gapps</h2>
+<h2 id="setting-up-gapps">Setting up GApps</h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Recent builds of Bliss OS have Gapps included. If your <code>.iso</code> file name includes "GMS", it has GApps built in and you shouldn't follow the guide below. If your file name includes "FOSS", it does not have GApps built in.</p>
+</div>
 <p><a href="https://forum.xda-developers.com/showpost.php?p=79289406&amp;postcount=632">See this thread from @wrwolf2!</a></p>
 <h2 id="watching-netflix-foss-gms-builds">Watching Netflix - FOSS &amp; GMS Builds</h2>
 <p>Netflix considers our rooted OS as an "incompatible" device, according to their support articles. <a href="https://www.apkmirror.com/apk/netflix-inc/netflix/netflix-4-16-1-build-15145-release/">This version of Netflix seems to work great</a>, as long as you don't update it. If it prompts you, click on "Cancel".</p>
+<h2 id="setting-up-magisk">Setting up Magisk</h2>
+<ol>
+<li>Extract the latest Bliss OS <code>.iso</code>, and grab those files:<ul>
+<li><code>initrd.img</code></li>
+<li><code>ramdisk.img</code></li>
+<li><code>kernel</code></li>
+</ul>
+</li>
+<li>Run:
+    <code>mkbootimg --kernel kernel --ramdisk ramdisk.img --second initrd.img --output boot.img</code></li>
+<li>Copy the boot image to Bliss OS.</li>
+<li>Use Magisk Manager to patch the boot image. Select Install &gt; Select and Patch File, and then select the <code>boot.img</code> you created earlier. The patcher should produce the file <code>magisk_patched.img</code>.</li>
+<li>
+<p>We need to remove the current superuser binary. Run within Bliss OS in a terminal emulator</p>
+<p><code>su</code></p>
+<p><code>cd /system/xbin &amp;&amp; mv su su.bak</code></p>
+<p><code>exit</code></p>
+</li>
+<li>
+<p>Copy the patched <code>magisk_patched.img</code> file back to your computer.</p>
+</li>
+<li>
+<p>Unpack the image:</p>
+<p><code>unpackimg magisk_patched.img</code></p>
+</li>
+<li>
+<p>Rename the following files:</p>
+<ul>
+<li><code>magisk_patched.img-zImage</code> to <code>kernel</code></li>
+<li><code>magisk_patched.img-second</code> to <code>initrd.img</code></li>
+<li><code>magisk_patched.img-ramdisk.cpio.gz</code> to <code>ramdisk.img</code></li>
+</ul>
+</li>
+<li>
+<p>Replace the files back to the original Bliss OS <code>.iso</code>.</p>
+</li>
+<li>Boot to Bliss, and you should have a successful Magisk installation!</li>
+</ol>
                 
                   
                 
