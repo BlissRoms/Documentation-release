@@ -592,6 +592,14 @@ title Bliss-OS 11.7 (Debug video=LVDS-1:d)
 <li><code>fbcon=variablename</code>: This is to configure framebuffer to use various options. Usually used to help fix video settings, etc. Even default rotation on some Atom tablets. Example: <code>video=efifb fbcon=rotate:1</code></li>
 <li><code>VULKAN=1</code>: Required for Vulkan-supported chipsets. This enables <code>hwcomposer</code> to work right with screenshots and other things.</li>
 </ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The following options can only be used on Android 9/10 builds released after 2020-02-02.</p>
+</div>
+<ul>
+<li><code>HWC=xxx</code>: Define <code>DRM_HWComposer</code> - options include <code>drm</code>, <code>drm_minigbm</code>, and <code>intel</code>.</li>
+<li><code>GRALLOC=xxx</code>: Define <code>DRM_Gralloc</code> - options include <code>gbm</code>, <code>minigbm</code>, and <code>intel</code>.</li>
+</ul>
 <p>As an example, here are a few of the boot options used in testing:</p>
 <pre><code>menuentry 'Bliss-x86 Test-Oreo' --class bliss {
     search --file --no-floppy --set=root /AndroidOS/android.boot
