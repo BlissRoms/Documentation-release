@@ -965,7 +965,8 @@ none : force all extraOption flags to false.
 <p>This will do initial patching. Some of the patches will show as <code>already applied</code> or <code>conflict</code>. This is normal behavior and will not effect the build process if you continue to the next step without addressing any of the conflicts.</p>
 <p><strong>The only times you should worry about the conflicts is when you are adding or changing patches in <code>vendor/x86</code></strong>.</p>
 <p>Next step is to download the proprietary files from ChromeOS:</p>
-<pre><code>mkdir -p vendor/bliss_priv/proprietary
+<pre><code>git clone https://github.com/BlissRoms-x86/vendor_bliss_priv.git -b p9.0 vendor/bliss_priv
+mkdir -p vendor/bliss_priv/proprietary
 mkdir -p vendor/bliss_priv/source
 bash build-x86.sh -r android_x86_64-userdebug
 </code></pre>
@@ -988,7 +989,8 @@ bash build-x86.sh -r android_x86_64-userdebug
 <h3 id="my-device-isnt-booting-and-userdebug-wont-print-any-adb-logcats-what-gives">My device isn't booting, and <code>userdebug</code> won't print any <code>adb logcat</code>s. What gives?</h3>
 <p>There is a third build variant called <code>eng</code>, short for engineering builds. These builds will activate <code>adb logcat</code> during boot, and will show you exactly what is going wrong, where, and why. However, these builds are <strong>NOT</strong> recommended for normal usage as they are not securely hardened, have log spam that will slow down your device, and other unexpected problems like userspace utilities crashing during runtime. If you want to submit your device for mainline, do <strong>NOT</strong> submit an <code>eng</code> build!</p>
 <p>If this is the first time you're running the build, you're going to want to run the proprietary build command first from the easy build instructions. Alternatively, you could also run those commands manually.</p>
-<pre><code>mkdir -p vendor/bliss_priv/proprietary &amp;&amp; mkdir -p vendor/bliss_priv/source
+<pre><code>git clone https://github.com/BlissRoms-x86/vendor_bliss_priv.git -b p9.0 vendor/bliss_priv
+mkdir -p vendor/bliss_priv/proprietary &amp;&amp; mkdir -p vendor/bliss_priv/source
 </code></pre>
 <p>Then:</p>
 <pre><code>lunch android_x86_64-userdebug
